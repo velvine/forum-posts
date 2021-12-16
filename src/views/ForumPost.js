@@ -7,7 +7,6 @@ import Spinner from '../components/Spinner';
 
 const ForumPost = () => {
     const { id } = useParams()
-    console.log(id)
     const [post, setPost] = useState(null);
     const [comments, setComments] = useState([])
     const [isLoading, setIsLoading] = useState(false)
@@ -32,9 +31,8 @@ const ForumPost = () => {
             getPost();
             getComments();
         }
+        // eslint-disable-next-line
     }, [id]);
-
-    console.log(comments)
 
     return (
         <>
